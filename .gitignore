@@ -1,13 +1,23 @@
-# Pasta de desenvolvimento (manter apenas para referência)
+# Pasta de desenvolvimento (ignorar completamente)
 Dureflex-theme/
 
 # Arquivos de desenvolvimento
 wp-config-local.php
 .php-cs-fixer.php
 .phpstorm.meta.php
+*.md
+*.bat
+*.ps1
+php-portable/
+vendor/
+composer.*
+phpcs.xml
+iniciar-servidor.*
+criar-favicon-png.html
 
-# Documentação de desenvolvimento
-CONFIGURACAO-HOSTINGER-GIT.md
+# Pastas de desenvolvimento
+Logo-Images/
+.vscode/
 
 # Logs e temporários
 *.log

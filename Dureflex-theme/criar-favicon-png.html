@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gerar Favicon PNG</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+        #canvas {
+            border: 1px solid #ccc;
+            margin: 20px;
+        }
+        .btn {
+            background: #1e40af;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gerador de Favicon PNG - Dureflex</h1>
+    <canvas id="canvas" width="32" height="32"></canvas>
+    <br>
+    <button class="btn" onclick="generateFavicon()">Gerar Favicon</button>
+    <button class="btn" onclick="downloadFavicon()">Download PNG</button>
+    
+    <script>
+        function generateFavicon() {
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Limpar canvas
+            ctx.clearRect(0, 0, 32, 32);
+            
+            // Background rounded square com gradiente
+            const gradient = ctx.createLinearGradient(0, 0, 32, 32);
+            gradient.addColorStop(0, '#4A90E2');
+            gradient.addColorStop(1, '#2E5BBA');
+            
+            ctx.fillStyle = gradient;
+            ctx.roundRect(1, 1, 30, 30, 6);
+            ctx.fill();
+            
+            // Frame branco
+            ctx.strokeStyle = 'white';
+            ctx.lineWidth = 1;
+            ctx.roundRect(4, 4, 24, 24, 2);
+            ctx.stroke();
+            
+            // Letter D
+            ctx.fillStyle = 'white';
+            ctx.font = 'bold 10px Arial';
+            ctx.textAlign = 'left';
+            ctx.fillText('D', 6, 18);
+            
+            // Letter X  
+            ctx.fillText('X', 20, 18);
+        }
+        
+        function downloadFavicon() {
+            const canvas = document.getElementById('canvas');
+            const link = document.createElement('a');
+            link.download = 'favicon.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+        
+        // Gerar automaticamente ao carregar
+        generateFavicon();
+    </script>
+</body>
+</html>

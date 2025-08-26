@@ -1,22 +1,32 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html <?php echo function_exists('language_attributes') ? language_attributes() : 'lang="pt-BR"'; ?>>
 <head>
-    <meta charset="<?php bloginfo('charset'); ?>">
+    <meta charset="<?php echo get_bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php wp_title('|', true, 'right'); ?><?php bloginfo('name'); ?></title>
+    <title><?php echo get_bloginfo('name'); ?> - <?php echo get_bloginfo('description'); ?></title>
     <link rel="profile" href="http://gmpg.org/xfn/11">
-    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-    <?php wp_head(); ?>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/DUREFLEX.png">
+    <link rel="apple-touch-icon" href="assets/images/DUREFLEX.png">
+    <link rel="shortcut icon" href="assets/images/DUREFLEX.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <?php if (function_exists('wp_head')) wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php echo function_exists('body_class') ? body_class() : 'class="dureflex-theme"'; ?>>
     <header class="site-header">
         <nav class="navbar">
             <div class="logo">
-                <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
-                </svg>
-                <?php bloginfo('name'); ?>
+                <img src="assets/images/DUREFLEX.png" alt="Dureflex - Suprimentos Logísticos" width="240" height="auto" class="logo-img">
             </div>
             
             <?php

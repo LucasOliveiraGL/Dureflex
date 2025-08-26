@@ -1,0 +1,31 @@
+# Dependências do Composer
+/vendor/
+composer.lock
+
+# Arquivos de configuração local
+.env
+.env.local
+.env.production
+
+# Arquivos de cache
+*.cache
+*.log
+
+# Arquivos temporários
+*.tmp
+*.temp
+
+# Arquivos de IDE
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+.phpstorm.meta.php
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de backup
+*.bak
+*.backup

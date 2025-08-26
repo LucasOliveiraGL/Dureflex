@@ -1,38 +1,44 @@
-<?php get_header(); ?>
+<?php 
+// Carregar configuração local se não estivermos em um ambiente WordPress real
+if (!function_exists('get_header')) {
+    require_once 'wp-config-local.php';
+}
+get_header(); 
+?>
 
 <main>
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Soluções Completas para <span class="highlight">Logística e Armazenamento</span></h1>
-            <p>A Dureflex oferece equipamentos e insumos de alta qualidade para otimizar sua operação logística. Desde racks industriais até sistemas automatizados, temos a solução ideal para seu negócio.</p>
+            <h1>Insumos e Embalagens para <span class="highlight">Logística Industrial</span></h1>
+            <p>A Dureflex é especializada em insumos e embalagens de alta qualidade para operações logísticas. Oferecemos soluções completas em materiais de embalagem, etiquetagem e identificação para otimizar sua cadeia de suprimentos.</p>
             
             <div class="cta-buttons">
                 <a href="#products" class="btn-primary">Ver Catálogo de Produtos</a>
-                <a href="#contact" class="btn-secondary">Solicitar Consultoria</a>
+                <a href="#contact" class="btn-secondary">Solicitar Orçamento</a>
             </div>
             
             <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; max-width: 900px; margin-left: auto; margin-right: auto;">
                 <div style="text-align: center;">
                     <svg style="width: 3rem; height: 3rem; color: #fbbf24; margin: 0 auto 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
                     </svg>
-                    <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem;">Equipamentos Premium</h3>
-                    <p style="opacity: 0.9;">Produtos de alta durabilidade e performance para operações intensivas</p>
+                    <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem;">Embalagens Resistentes</h3>
+                    <p style="opacity: 0.9;">Materiais de alta qualidade para proteção e durabilidade</p>
                 </div>
                 <div style="text-align: center;">
                     <svg style="width: 3rem; height: 3rem; color: #fbbf24; margin: 0 auto 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
                     </svg>
-                    <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem;">Eficiência Aumentada</h3>
-                    <p style="opacity: 0.9;">Soluções que aumentam a produtividade e reduzem custos operacionais</p>
+                    <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem;">Identificação Precisa</h3>
+                    <p style="opacity: 0.9;">Etiquetas e sistemas de identificação para rastreabilidade</p>
                 </div>
                 <div style="text-align: center;">
                     <svg style="width: 3rem; height: 3rem; color: #fbbf24; margin: 0 auto 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                     </svg>
                     <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem;">Suporte Especializado</h3>
-                    <p style="opacity: 0.9;">Equipe técnica qualificada para instalação e manutenção</p>
+                    <p style="opacity: 0.9;">Equipe técnica qualificada para atendimento e suporte</p>
                 </div>
             </div>
         </div>
@@ -40,9 +46,9 @@
 
     <!-- Products Section -->
     <section id="products" class="products-section">
-        <div class="section-title">Catálogo de Produtos</div>
+        <div class="section-title">Nossos Produtos</div>
         <div class="section-subtitle">
-            Soluções completas para otimizar sua operação logística. Todos os produtos com garantia e suporte técnico especializado.
+            Folhas A4, filme stretch, etiquetas e fitas adesivas de alta qualidade. Soluções completas para escritórios e operações logísticas.
         </div>
         
         <?php echo do_shortcode('[dureflex_products]'); ?>
@@ -60,7 +66,7 @@
         <div style="background: #1e40af; color: white; padding: 2rem; border-radius: 0.5rem; text-align: center; margin-top: 3rem;">
             <h3 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">Junte-se a mais de 500 empresas satisfeitas</h3>
             <p style="font-size: 1.125rem; margin-bottom: 1.5rem;">Transforme sua operação logística com soluções da Dureflex</p>
-            <a href="#contact" style="background: #fbbf24; color: #1e40af; padding: 0.75rem 1.5rem; border-radius: 0.375rem; font-weight: bold; text-decoration: none;">Solicitar Consultoria Gratuita</a>
+            <a href="#contact" style="background: #fbbf24; color: #1e40af; padding: 0.75rem 1.5rem; border-radius: 0.375rem; font-weight: bold; text-decoration: none;">Solicitar Orçamento</a>
         </div>
     </section>
 
@@ -178,17 +184,6 @@
                             <p style="color: #6b7280; font-size: 0.875rem;">Sábado: 9h - 13h</p>
                         </div>
                     </div>
-                </div>
-                
-                <div class="contact-card" style="background: #1e40af; color: white;">
-                    <h3>Consultoria Especializada</h3>
-                    <p style="margin-bottom: 1rem;">Nossa equipe de especialistas está pronta para analisar suas necessidades e oferecer a solução mais adequada para sua operação.</p>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 0.5rem;">• Avaliação gratuita do espaço</li>
-                        <li style="margin-bottom: 0.5rem;">• Projeto personalizado</li>
-                        <li style="margin-bottom: 0.5rem;">• Instalação profissional</li>
-                        <li style="margin-bottom: 0.5rem;">• Suporte técnico contínuo</li>
-                    </ul>
                 </div>
             </div>
         </div>

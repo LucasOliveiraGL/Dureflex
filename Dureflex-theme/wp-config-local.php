@@ -251,8 +251,8 @@ function get_sample_products() {
     return [
         [
             'id' => 1,
-            'title' => 'Folha A4 Caixa',
-            'price' => 28.50,
+            'title' => 'Caixa de Folhas A4',
+            'price' => 25,90,
             'category' => 'Papelaria Corporativa',
             'image' => 'assets/images/folha-a4-caixa.jpg',
             'specs' => [

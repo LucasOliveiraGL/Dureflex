@@ -1,0 +1,24 @@
+{
+    "php.validate.enable": true,
+    "php.suggest.basic": false,
+    "phpcs.enable": false,
+    "phpcs.standard": "WordPress",
+    "phpcs.executablePath": "",
+    "phpcs.ignorePatterns": [
+        "*/vendor/*",
+        "*/node_modules/*"
+    ],
+    "files.associations": {
+        "*.php": "php"
+    },
+    "emmet.includeLanguages": {
+        "php": "html"
+    },
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/vendor": true,
+        "**/.git": true,
+        "**/wp-content/uploads": true,
+        "**/wp-content/cache": true
+    }
+}
